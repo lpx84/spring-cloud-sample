@@ -1,0 +1,14 @@
+{
+  "linters": {
+    "pmd": {
+      "type": "pmd",
+      "include": "(\\.java$)",
+      "bin": "/opt/pmd-bin-6.15.0/bin/run.sh",
+      "flags": [
+        "-rulesets",
+        ".arcrules/pmd-ruleset.xml",
+        "-dir"
+      ]
+    }
+  }
+}
