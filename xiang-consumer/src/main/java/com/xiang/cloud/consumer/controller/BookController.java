@@ -29,4 +29,10 @@ public class BookController {
         return bookService.update(isbn);
     }
 
+
+    @GetMapping("/del/{isbn}")
+    public String del(@PathVariable("isbn") String isbn) {
+        bookService.delete(isbn);
+        return isbn;
+    }
 }

@@ -17,4 +17,6 @@
         <exclude name="AtLeastOneConstructor"/>
         <exclude name="LocalVariableCouldBeFinal"/>
     </rule>
+    <rule ref="category/java/errorprone.xml">
+    </rule>
 </ruleset>

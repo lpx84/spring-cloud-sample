@@ -1,0 +1,17 @@
+package com.xiang.cloud;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
+
+@EnableDiscoveryClient
+@EnableConfigServer
+@SpringBootApplication
+public class XiangConfigApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(XiangConfigApplication.class, args);
+    }
+
+}

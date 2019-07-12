@@ -1,9 +1,12 @@
 package com.xiang.cloud.consumer.entity;
 
+import lombok.NoArgsConstructor;
+
 /**
  * @author lpxiangvip@126.com
  * @date 2019/5/27
  */
+@NoArgsConstructor
 public class Book {
 
     private String isbn;
