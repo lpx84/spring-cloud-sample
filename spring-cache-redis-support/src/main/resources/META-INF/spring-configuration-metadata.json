@@ -1,0 +1,88 @@
+{
+  "groups": [
+    {
+      "name": "spring.cache.redis.support",
+      "type": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cache.redis.support.key-prefix",
+      "type": "java.lang.String",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": "",
+      "description": "RedisKey的前缀，假如设为：test, 那么最终redis的key形式为: test:<cacheName>:<key>"
+    },
+    {
+      "name": "spring.cache.redis.support.default-expire-time",
+      "type": "java.time.Duration",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": "60s",
+      "description": ""
+    },
+    {
+      "name": "spring.cache.redis.support.cache-null-values",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": true,
+      "description": "Redis是否缓存NULL值"
+    },
+    {
+      "name": "spring.cache.redis.support.key-serializer",
+      "type": "java.lang.String",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": "org.springframework.data.redis.serializer.StringRedisSerializer",
+      "description": "Key序列化器: 需实现org.springframework.data.redis.serializer.RedisSerializer<String>"
+    },
+    {
+      "name": "spring.cache.redis.support.value-serializer",
+      "type": "java.lang.String",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": "com.xiang.cloud.cache.redis.serializer.KryoObjectRedisSerializer",
+      "description": "Value序列化器: 需实现org.springframework.data.redis.serializer.RedisSerializer<Object>"
+    },
+    {
+      "name": "spring.cache.redis.support.conversion-service",
+      "type": "java.lang.String",
+      "sourceType": "com.xiang.cloud.cache.redis.RedisCacheProperty",
+      "defaultValue": "",
+      "description": "ConversionService: 需实现org.springframework.core.convert.ConversionService"
+    }
+  ],
+  "hints": [
+    {
+      "name": "spring.cache.redis.support.cache-null-values",
+      "values": [
+        {
+          "value": true
+        },
+        {
+          "value": false
+        }
+      ]
+    },
+    {
+      "name": "spring.cache.redis.support.key-serializer",
+      "values": [
+        {
+          "value": "org.springframework.data.redis.serializer.StringRedisSerializer"
+        }
+      ]
+    },
+    {
+      "name": "spring.cache.redis.support.value-serializer",
+      "values": [
+        {
+          "value": "com.xiang.cloud.cache.redis.serializer.KryoObjectRedisSerializer"
+        },
+        {
+          "value": "org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"
+        },
+        {
+          "value": "org.springframework.data.redis.serializer.JdkSerializationRedisSerializer"
+        }
+      ]
+    }
+  ]
+}

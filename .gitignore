@@ -3,3 +3,6 @@
 *.iml
 .DS_STORE
 
+mvnw
+mvnw.cmd
+.mvn/
