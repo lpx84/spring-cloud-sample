@@ -1,1 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.xiang.cloud.cache.redis.SpringCacheRedisSupportAutoConfiguration
